@@ -5,6 +5,7 @@ import Dashboad from "./Components/Dashboad.jsx";
 import { Navigate, Routes, Route } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Home from "./Components/Home.jsx";
 
 function App() {
 const firebaseConfig = {
@@ -42,7 +43,8 @@ const firebaseConfig = {
       ) : isUserLogedin ? (
         <>
           <Routes>
-            <Route path="/" element={<Dashboad />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboad" element={<Dashboad />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </>
