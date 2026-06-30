@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
-
 const Signin = () => {
   const auth = getAuth();
   const navigate = useNavigate();
@@ -73,7 +72,7 @@ const Signin = () => {
             Create Account
           </Link>
         </p>
-
+        <Link to="/forget">Forget</Link>
       </div>
     </div>
   );

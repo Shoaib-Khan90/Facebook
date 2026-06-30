@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Signin from "./Pages/Signin.jsx";
-import SignUp from "./Pages/SignUp.jsx";
+import Signin from "./Components/Signin.jsx";
+import SignUp from "./Components/SignUp.jsx";
 import Dashboad from "./Components/Dashboad.jsx";
 import { Navigate, Routes, Route } from "react-router-dom";
 import { initializeApp } from "firebase/app";
@@ -43,9 +43,9 @@ const firebaseConfig = {
       ) : isUserLogedin ? (
         <>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/dashboad" element={<Dashboad />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/home" />} />
           </Routes>
         </>
       ) : (
