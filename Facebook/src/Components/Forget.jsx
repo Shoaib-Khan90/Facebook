@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { Link } from 'react-router-dom';
 
 const Forget = () => {
 
@@ -30,6 +31,7 @@ const Forget = () => {
         <br />
         <button>Send Reset Email</button>
       </form>
+        <Link to="/signin">Login</Link>
     </div>
   )
 }

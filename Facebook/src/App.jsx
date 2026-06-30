@@ -6,6 +6,7 @@ import { Navigate, Routes, Route } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Home from "./Components/Home.jsx";
+import Forget from "./Components/Forget.jsx";
 
 function App() {
 const firebaseConfig = {
@@ -52,6 +53,7 @@ const firebaseConfig = {
         <Routes>
           <Route path="/login" element={<Signin />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forget" element={<Forget />} />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       )}

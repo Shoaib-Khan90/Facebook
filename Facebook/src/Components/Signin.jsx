@@ -72,7 +72,7 @@ const Signin = () => {
             Create Account
           </Link>
         </p>
-        <Link to="/forget">Forget</Link>
+        <Link to="/forget">Forget Password</Link>
       </div>
     </div>
   );
